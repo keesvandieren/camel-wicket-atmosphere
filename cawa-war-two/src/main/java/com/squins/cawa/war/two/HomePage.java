@@ -25,6 +25,6 @@ public class HomePage extends WebPage {
 
         add(new Label("version", getApplication().getFrameworkSettings().getVersion()));
 
-        producer.produce("Hoi van Wicket two");
+        producer.produce("Hi from Wicket, war two");
     }
 }

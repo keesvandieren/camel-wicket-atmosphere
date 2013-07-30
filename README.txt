@@ -23,6 +23,6 @@ Steps:
 ** slf4j-log4j12-1.7.5.jar
 * deploy both wars in Jetty (I am currently using IntelliJ IDEA for that).
 * Refresh the page.
-
+* Now look in the console to see which war received it.
 
 
