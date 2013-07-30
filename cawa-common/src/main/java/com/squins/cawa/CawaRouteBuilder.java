@@ -5,10 +5,10 @@ import org.apache.camel.builder.RouteBuilder;
 public class CawaRouteBuilder extends RouteBuilder {
 
     public void configure() {
-        String vmEndpoint = "vm:sampleVmQueue?multipleConsumers=true";
-        from("direct:start").to(vmEndpoint);
+        String vmEndpoint = "vm:sampleVmQueue?concurrentConsumers=2&multipleConsumers=true";
+        from("direct:start").multicast().to(vmEndpoint);
 
-        from("vm:sampleVmQueue?multipleConsumers=true").beanRef("sampleConsumer");
+        from(vmEndpoint).beanRef("sampleConsumer");
     }
 
 }

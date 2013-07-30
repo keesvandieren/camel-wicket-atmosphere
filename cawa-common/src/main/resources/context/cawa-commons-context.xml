@@ -27,7 +27,11 @@
     </camelContext>
 
 
-    <bean id="sampleConsumer" class="com.squins.cawa.SampleConsumer">
+    <bean id="sampleConsumer" class="com.squins.cawa.SampleConsumer1">
+
+    </bean>
+
+    <bean class="com.squins.cawa.SampleConsumer2">
 
     </bean>
 
@@ -36,8 +40,6 @@
         <property name="producer">
             <bean class="org.apache.camel.spring.CamelProducerTemplateFactoryBean"/>
         </property>
-
-
     </bean>
 
 </beans>
